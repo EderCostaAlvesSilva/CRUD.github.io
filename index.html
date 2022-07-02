@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Cadastro de Cliente</h1>
+    </header>
+
+    <main>
+        <section>
+            <button type="button" id="btnCadastrar">
+                Cadastrar Cliente
+            </button>
+        </section>
+
+        <table  id="dados" width="98%">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Celular</th>
+                    <th>Cidade</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <!-- MODAL APAGAR -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Excluir Cliente</h2>
+                    <span class="modal-close" id="modalClose2">&#10006;</span>
+                </header>
+                <div id="avisoDelete">
+                    <!-- aviso de delete -->
+                </div>
+                <footer class="modal-footer">
+                    <button id="apagar" class="button red">
+                        Apagar
+                    </button>
+                    <button id="cancelar2" class="button blue">
+                        Cancelar
+                    </button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- MODAL CRIAR E EDITAR -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Cliente</h2>
+                    <span id="modalClose" class="modal-close">
+                        &#10006;
+                    </span>
+                </header>
+                <form id="form" class="modal-form"> 
+                    <input 
+                    type="text" 
+                    class="modal-field"
+                    id="nome"
+                    placeholder="Nome do Cliente"
+                    data-index="new" required>
+
+                    <input 
+                    type="email" 
+                    class="modal-field"
+                    id="email"
+                    placeholder="E-mail do Cliente"
+                    data-index="new" required>
+
+                    <input 
+                    type="text" 
+                    class="modal-field"
+                    id="celular"
+                    placeholder="Celular do Cliente"
+                    data-index="new" required>
+
+                    <input 
+                    type="text" 
+                    class="modal-field"
+                    id="cidade"
+                    placeholder="Cidade do Cliente"
+                    data-index="new" required>
+                </form>
+
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">
+                        Salvar
+                    </button>
+                    <button id="cancelar" class="button blue ">
+                        Cancelar
+                    </button>
+                </footer>
+            </div>
+        </div>
+        
+        
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
